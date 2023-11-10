@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project 2 - Data Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+				
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Data Analysis<br />
+						</h1>
+						<p> </a></p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+				<header id="header">
+					<a href="https://ronanc92.github.io/RonansPortfolio.github.io/" class="logo">Home</a>
+				</header>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="https://ronanc92.github.io/RonansPortfolio.github.io/">Home</a></li>
+						<li><a href="https://ronanc92.github.io/RonansFeaturedProject.github.io/">Featured Project</a></li>
+						<li><a href="https://ronanc92.github.io/RonanC92-RonansProject1.github.io/">Data Cleaning</a></li>
+						<li class="active"><a href="https://ronanc92.github.io/RonansProject2.github.io/">Data Analysis</a></li>
+						<li><a href="https://ronanc92.github.io/RonansProject3.github.io/">Data Visualization</a></li>
+
+					</ul>
+
+				
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/ronan-costello-830063b3/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+							<li><a href="https://github.com/RonanC92" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Project Post -->
+						
+							<article class="Data Cleaning">
+								<header class="major">
+									<div align="left">
+										<span class="image fit"><img src="images/data_analysis.jpg" alt="" /></span>	
+									<h3 id="Introduction"><span id="introduction">Introduction</span></h3>
+									<p> In this project I will be going through the analysis of the 'Stack Overflow Developer Survey 2023' with the primary geography being the United States of America. 
+										I will be primarily focusing on the data analysis phase and how we can use SQL queries to gain better analysis and insights.</p>
+										
+										<h3 id="Statement of business task"><span id="Statement of business task">Statement of business task</span></h3>
+										<p> One of the most important phases for an analyst is the analyse phase. Within this phase the analyst can solve the problems the company is looking to solve. 
+											Using the Data set ‘Stack Overflow Annual Developer Survey 2023’ I will be able to guide you on how I was able to solve the problems and gain better insights using SQL queries on BigQuery. 
+											I will solve Problems such as, which companies pay developers the most; How much remote working matters to employees; how coding experience affect levels of pay; 
+											Most popular method of learning to code; how likely you are to get job if you have a master’s degree. </p>
+											<h3 id="Preparing the data"><span id="Preparing the data">Preparing the data</span></h3>
+											<p> 
+												<ul>
+												<li> In this analysis I am using the data 'Stack Overflow Annual Developer Survey 2023' listed <a href="https://insights.stackoverflow.com/survey ">here.</a></li> 
+												<li> Data is open source and ready for anyone to analyse.  </li>
+												<li> Contains Survey Data on 89184 anonymous developers various metrics such as Age, Employed, Education level, Years in coding, Country, Salary (total), etc.</li>
+											    <li> Dataset has 2 files in CSV format where one file is organized in wide format and the other file is the schema. </li>
+											</ul>
+											</p>	
+											<h3 id="ROCCC Analysis"><span id="ROCCC Analysis">ROCCC Analysis </span></h3>
+											<p> 
+												<ul>
+												<li> Reliability : <strong>MEDIUM</strong> – Dataset was collected from 89184 anonymous but trusted community of developers from various backgrounds.</li>
+												<li> Originality : <strong>MEDIUM</strong> – Survey is produced from a secondary source meaning that the data collected came from stack overflow itself.</li>
+												<li> Comprehensive : <strong>HIGH</strong> – Contains a very comprehensive dataset using multiple columns on developer input from the survey.</li>
+											    <li> Current : <strong>HIGH</strong> – Data is 1 year old and is reproduced every year meaning the input of this survey is current and up to date.</li>
+												<li> Cited : <strong>HIGH</strong> – data collector and source is well documented.</li>
+											</ul>
+											</p>
+                                            <h3 id="Data Selection"><span id="Data Selection">Data Selection</span></h3>
+									<p> The focus here is to analyse and gain insights from the data that I have downloaded. There are only two datasets for this project and they are named: 
+									<li> survey_results_public.csv </li>
+									<li> survey_results_schema.csv </li>
+									</p>
+									
+									<h3 id="Processing the Data"><span id="Processing the Data">Processing the Data</span></h3>
+									<p> I will be using Excel & Big Query (RDBMS for SQL language scripts) for this project. I am using Excel to clean the data set like in the previous project and Big Query to verify the integrity and for the analysis of this Project. </p>
+									
+									<h3 id="Data Cleaning"><span id="Data Cleaning">Data Cleaning</span></h3>
+									 Below is a step by step guide for the data cleaning process: 
+										<ul>
+										<li> First, I download the dataset provided on the Stack Overflow website and unzip the files and I store it in a folder titled ‘Project2_Data_Analysis’.</li>
+										<li> I open both csv files into Microsoft excel and look through the data that has been provided to me scanning for any errors, blank fields or duplicates particularly on columns that I need for my analysis.</li>
+										<li> For all columns I have labelled a filter and open each column I may need scanning for potential errors. Comp total too high or too low a number may need to include market research salary ranges and include them as an average otherwise analysis would be skewed.</li>
+										<li> Next, I notice that I need to clean the Ed level & Org size columns as there is an unnecessary value entered “â€™”. I remove these using the find and replace function in the home tab.</li>
+										<li> As I am focusing on the United States of America geography, I notice that some of the salary’s inputs are far too low or too high. In order to not skew the results, I conducted some market research to find out the salary ranges of developer salaries and with the average I replace the lower/higher figure with this new figure. </li>
+										<p></p>
+									
+									<h3 id="Data Integrity"><span id="Data Integrity">Data Integrity</span></h3>
+									<p> Once I am happy with that the data is cleaned, I move it then on into Big Query for analysis. I want to check the number if unique Ids in the table to validate the integrity and I can do this by writing the following query:   
+										<span class="image fit"><img src="images/SQL1.png" alt="" /></span>					
+									 The result shows the dataset is consistent as we expected 89140 unique Response Id from the table and gives us the certainty of a high level of integrity when analysing the data.</p>
+										
+									<h3 id="Data Analysis"><span id="Data Analysis">Data Analysis</span></h3>
+									<p> For SQL querying I need to first Identify the Problems that I am trying to Analyse. For this Analysis I am on Looking the United States of America Geography: 
+									<li>At what companies do developers get the paid the most?</li> 
+									<li>How much does remote working matter to employees?</li> 
+									<li>How does coding experience affect the level of pay?</li> 
+									<li>What’s the most popular method of learning to code?</li>
+									<li>Are you more likely to get a job as a developer if you have a master’s degree?</li>
+									<p><strong> Answer: At what companies do developers get the paid the most?<span class="image fit"><img src="images/SQL2.png" alt="" /></span></strong>					 
+									From the survey I only have information I have on the size of the company. In order to find out where the highest earners came from, I wrote a script that took the average salaries by the company size. There was an issue with the schema for Comptotal being a String text and not an integer and I was able to use the SAFE_Cast Function to get around this. From the Results I can conclude that Organizations with 10,000 or more employees are the highest paid. </p> 
+									<p><strong> Answer: How much does remote working matter to employees?<span class="image fit"><img src="images/SQL3.png" alt="" /></span></strong>					 
+									As we can conclude from the results that Remote working is the most important with 8889 total employees currently working remotely in the USA followed by a Hybrid model of 5179 employees. </p>
+									<p><strong> Answer: How does coding experience affect the level of pay?<span class="image fit"><img src="images/SQL4.jpg" alt="" /></span></strong>				 
+									For this query I had to create a Common Table expression (CTE) and named it SalaryData while also using the SAFE_CAST function for the string columns. I then made a case statement to group the years of coding experience into ranges. From the analysis I concluded that the highest salary range when it came to coding experience is between 21-30 years of coding and then after that the range peaks.</p>
+									<p><strong> Answer: What’s the most popular method of learning to code?<span class="image fit"><img src="images/SQL5.jpg" alt="" /></span></strong>				 
+									Under this query I used the SPLIT clause to split the Data that were delimited by a semicolon in the LearnCode Column as this was a multiple-choice question and respondents could choose as many answers as they liked. Then using the UNNEST clause I was able to get a count for each method. From there I was able to conclude the top 5 methods for learning code were Other online resources (e.g., videos, blogs, forum), Books / Physical media, School (i.e., University, College, etc), On the job training and Online Courses or Certification.</p>
+									<p><strong> Answer: Are you more likely to get a job as a developer if you have a master’s degree?<span class="image fit"><img src="images/SQL6.jpg" alt="" /></span></strong>				 
+									In this Query I first wanted to break down all the different methods of employment types. After this I then got the count of all master’s degree education and then I was able to express this as a grand total rounding it to 2 decimal places. I am able to conclude that 86.15% who hold master’s degree in the united states are currently in employment. </p>
+										
+
+									
+									</p>
+									<h3 id="Conclusion"><span id="Conclusion">Conclusion</span></h3>
+									<p> In Conclusion I able to effectively analyse and provide insights by using SQL queries from the data provided to me and answering the objectives I had laid out.
+										Now that I have come up with effective analysis, I will now be able to create visualizations to showcase this to my stakeholders. In the next project I will show how to create charts and dashboards using Tableau.
+									</p>
+								
+								</header>
+
+								
+								
+								</ul>
+							</article>
+						
+						<!-- Footer -->
+							<footer>
+								<div class="pagination">
+									<!--<a href="#" class="previous">Prev</a>-->
+									<a href="https://ronanc92.github.io/RonanC92-RonansProject1.github.io/" class="previous">back</a>
+									<a href="https://ronanc92.github.io/RonansFeaturedProject.github.io/" class="page">1</a>
+									<a href="https://ronanc92.github.io/RonanC92-RonansProject1.github.io/" class="page">2</a>
+									<a href="https://ronanc92.github.io/RonansProject2.github.io/" class="page active">3</a>
+									<a href="https://ronanc92.github.io/RonansProject3.github.io/" class="page">4</a>
+									<a href="https://ronanc92.github.io/RonansProject3.github.io/" class="next">Next</a>
+								
+								</div>
+							</footer>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Data Analysis</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
